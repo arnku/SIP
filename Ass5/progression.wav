@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#333333">
+  
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="/web-app-manifest/manifest.json">
+  <meta name="sentry-trace" content="34ba5ba89edf4cc68d87e67a34fac6b3-24bf3b4159a64dd8-0"/>
+  <title>Files</title>
+
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/extended/Lato-Regular-bd03a2cc27.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/extended/Lato-Bold-cccb897485.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/extended/Lato-Italic-4eb103b4d1.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/fonts-eb4a10fb18.css" media="screen" />
+  <link rel="stylesheet" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/4fcc371bc3d638f8fb4ed2047fa3cc84/variables-6ceabaf6137deaa1b310c07895491bdd.css" media="all" />
+  <link rel="stylesheet" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/common-6e20521342.css" media="all" />
+  <link rel="stylesheet" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/react_files-f57e451c2d.css" media="screen" />
+  <link rel="stylesheet" href="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/new_user_tutorials-6b15f87caf.css" media="screen" />
+  <link rel="apple-touch-icon" href="https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_75000000000000001/attachments/16506/KU-logo_180x180.png?AWSAccessKeyId=AKIAJE5F5SJN3PUW3VNQ&amp;Expires=1935635254&amp;Signature=JyIH5tolcPzTU8eU4iaKTdNaig0%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000%2C%20public&amp;response-expires=473364000" />
+  <link rel="icon" type="image/x-icon" href="https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_75000000000000001/attachments/16504/favicon_KU_48x48.ico?AWSAccessKeyId=AKIAJE5F5SJN3PUW3VNQ&amp;Expires=1935635146&amp;Signature=9TzKrXIle3fIf6dLAX1xFD%2FDK%2Fw%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000%2C%20public&amp;response-expires=473364000" />
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/javascripts/translations/en-GB-ecfceef970.json" as="fetch" type="application/json" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://instructure-uploads-eu.s3.eu-west-1.amazonaws.com/account_75000000000000001/attachments/3833741/ku.css" media="all" />
+  
+  <script>if (navigator.userAgent.match(/(MSIE|Trident\/)/)) location.replace('/ie-is-not-supported.html')</script>
+  <script>
+    INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"eu.nv.instructuremedia.com","resource_domain":"eu.nv.instructuremedia.com","rtmp_domain":"dub.rtmp.instructuremedia.com","partner_id":"5","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"logPageViews":true,"editorButtons":[{"name":"Quizlet","id":13,"favorite":false,"url":"https://www.edu-apps.org/lti_public_resources/?tool_id=quizlet","icon_url":"https://www.edu-apps.org/assets/lti_public_resources/quizlet_icon.png","canvas_icon_class":null,"width":560,"height":600,"use_tray":false,"on_by_default":false,"description":"\u003cp\u003eSearch for and embed publicly available flashcards and question sets from Quizlet. Questions can be embedded directly into content as flash cards, review, or as a study game.\u003c/p\u003e\n"},{"name":"LibApps Library Content","id":304,"favorite":false,"url":"https://ku-dk.libapps.com/libapps/lti_launch_manual.php","icon_url":"https://libapps.s3.amazonaws.com/apps/libapps/images/favicon_lti.png","canvas_icon_class":null,"width":800,"height":600,"use_tray":false,"on_by_default":false,"description":"\u003cp\u003eAdd content from LibGuides, E-Reserves, LibCal, and LibAnswers directly into your LMS course pages.\u003c/p\u003e\n"},{"name":"Embed Kaltura Media","id":14563,"favorite":false,"url":"https://343-1.kaltura.nordu.net/browseandembed/index/browseandembed","icon_url":"https://cdnsecakmi.kaltura.com/content/static/kalturalogo.png","canvas_icon_class":null,"width":1100,"height":600,"use_tray":false,"on_by_default":false,"description":"\u003cp\u003eMedia Gallery and Embed\u003c/p\u003e\n"},{"name":"Google Drive (LTI 1.3)","id":30935,"favorite":false,"url":"https://assignments.google.com/lti/e","icon_url":"https://www.gstatic.com/images/branding/product/2x/drive_2020q4_64dp.png","canvas_icon_class":null,"width":690,"height":530,"use_tray":false,"on_by_default":false,"description":"\u003cp\u003eCollect, analyze, and grade student work with Google Assignments\u003c/p\u003e\n"},{"name":"Microsoft OneDrive","id":41381,"favorite":false,"url":"https://onedrivelti.microsoft.com/tool","icon_url":"https://onedrivelti.microsoft.com/favicon-1.ico","canvas_icon_class":null,"width":800,"height":400,"use_tray":false,"on_by_default":false,"description":"\u003cp\u003eMicrosoft OneDrive LTI 1.3\u003c/p\u003e\n"},{"name":"FeedbackFruits","id":71948,"favorite":false,"url":"https://api.feedbackfruits.com/v1/lti/launch","icon_url":"https://eu.feedbackfruits.com/assets/images/favicons/apple-touch-icon.png","canvas_icon_class":null,"width":1024,"height":768,"use_tray":false,"on_by_default":false,"description":"\u003cp\u003eTools to support teachers teaching\u003c/p\u003e\n"}]};
+    ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/4fcc371bc3d638f8fb4ed2047fa3cc84/variables-6ceabaf6137deaa1b310c07895491bdd.json","active_brand_config":{"md5":"4fcc371bc3d638f8fb4ed2047fa3cc84","variables":{"ic-brand-primary":"#901a1e","ic-brand-font-color-dark":"#252525","ic-link-color":"#2c6694","ic-brand-button--secondary-bgd":"#666666","ic-brand-global-nav-bgd":"#333333","ic-brand-global-nav-logo-bgd":"#333333","ic-brand-header-image":"https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_75000000000000001/attachments/16505/KU-logo_negativ.png?AWSAccessKeyId=AKIAJE5F5SJN3PUW3VNQ\u0026Expires=1935635210\u0026Signature=ckCXykRgTzpRnuQZOtQgf4F6qgE%3D\u0026response-cache-control=Cache-Control%3Amax-age%3D473364000%2C%20public\u0026response-expires=473364000","ic-brand-watermark-opacity":"1","ic-brand-favicon":"https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_75000000000000001/attachments/16504/favicon_KU_48x48.ico?AWSAccessKeyId=AKIAJE5F5SJN3PUW3VNQ\u0026Expires=1935635146\u0026Signature=9TzKrXIle3fIf6dLAX1xFD%2FDK%2Fw%3D\u0026response-cache-control=Cache-Control%3Amax-age%3D473364000%2C%20public\u0026response-expires=473364000","ic-brand-apple-touch-icon":"https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_75000000000000001/attachments/16506/KU-logo_180x180.png?AWSAccessKeyId=AKIAJE5F5SJN3PUW3VNQ\u0026Expires=1935635254\u0026Signature=JyIH5tolcPzTU8eU4iaKTdNaig0%3D\u0026response-cache-control=Cache-Control%3Amax-age%3D473364000%2C%20public\u0026response-expires=473364000","ic-brand-msapplication-tile-square":"https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_75000000000000001/attachments/16507/KU-logo_558x558.png?AWSAccessKeyId=AKIAJE5F5SJN3PUW3VNQ\u0026Expires=1935635384\u0026Signature=WJiJsHfXsxohi3pOWYFGtc36Xss%3D\u0026response-cache-control=Cache-Control%3Amax-age%3D473364000%2C%20public\u0026response-expires=473364000","ic-brand-msapplication-tile-wide":"https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_75000000000000001/attachments/16508/KU-logo_558x270.png?AWSAccessKeyId=AKIAJE5F5SJN3PUW3VNQ\u0026Expires=1935635385\u0026Signature=iiHi8HY4SP2UXz2Dz55LAXHDm74%3D\u0026response-cache-control=Cache-Control%3Amax-age%3D473364000%2C%20public\u0026response-expires=473364000","ic-brand-right-sidebar-logo":"https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_75000000000000001/attachments/16509/KU-logo_360x140.png?AWSAccessKeyId=AKIAJE5F5SJN3PUW3VNQ\u0026Expires=1935635385\u0026Signature=nqwV363UvQKWQZzRdRm0%2B86TUmw%3D\u0026response-cache-control=Cache-Control%3Amax-age%3D473364000%2C%20public\u0026response-expires=473364000"},"share":false,"name":null,"created_at":"2023-08-23T09:31:24Z","js_overrides":"https://instructure-uploads-eu.s3.eu-west-1.amazonaws.com/account_75000000000000001/attachments/7465193/Theme%20Instructure%20JavaScript%20file%2023%20aug%202023%20latest.js","css_overrides":"https://instructure-uploads-eu.s3.eu-west-1.amazonaws.com/account_75000000000000001/attachments/3833741/ku.css","mobile_js_overrides":"","mobile_css_overrides":"https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_75000000000000001/attachments/12157/ku.css?AWSAccessKeyId=AKIAJE5F5SJN3PUW3VNQ\u0026Expires=1935550004\u0026Signature=o5N8bL80JiimMi8No2Nn8uhsP0s%3D\u0026response-cache-control=Cache-Control%3Amax-age%3D473364000%2C%20public\u0026response-expires=473364000","parent_md5":null},"confetti_branding_enabled":false,"url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/4fcc371bc3d638f8fb4ed2047fa3cc84/variables-6ceabaf6137deaa1b310c07895491bdd.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-a370c48efb.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/fonts-eb4a10fb18.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-6ceabaf6137deaa1b310c07895491bdd.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-1d2c45ff3b.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/no_variables/bundles/fonts-eb4a10fb18.css"],"captcha_site_key":"6LftyLgZAAAAAC10tel8XGucbApMIY8-uFB_yVcN","current_user_id":"388225","current_user_global_id":"75000000000388225","current_user_uuid":"kTMDJ3Ho8PqcUjZ0xDE6ljAgRihKMxGQazxs2lIf","current_user_usage_metrics_id":"dd8afa00e5c3ba500e655579660a09f1152ddd0716b125d7b82ff10b8b141320","current_user_roles":["user","student","observer"],"current_user_is_student":true,"current_user_types":[],"current_user_disabled_inbox":false,"current_user_visited_tabs":null,"discussions_reporting":true,"files_domain":"cluster84.canvas-user-content.com","group_information":null,"DOMAIN_ROOT_ACCOUNT_ID":"75000000000000001","DOMAIN_ROOT_ACCOUNT_UUID":"2zNtoGtg0pppE3rGPCvsgVoXdyDijCLH8gLaZgpH","CAREER_THEME_URL":null,"CAREER_DARK_THEME_URL":null,"k12":false,"help_link_name":"Help","help_link_icon":"help","ADA_CHATBOT_ENABLED":false,"use_high_contrast":false,"auto_show_cc":false,"disable_celebrations":false,"disable_keyboard_shortcuts":false,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *","autoplay *","clipboard-write *","display-capture *"],"DEEP_LINKING_POST_MESSAGE_ORIGIN":"https://absalon.ku.dk","comment_library_suggestions_enabled":false,"SETTINGS":{"open_registration":false,"collapse_global_nav":false,"release_notes_badge_disabled":false,"can_add_pronouns":true,"show_sections_in_course_tray":true,"enable_content_a11y_checker":false,"suppress_assignments":false},"RAILS_ENVIRONMENT":"production","use_dyslexic_font":false,"IN_PACED_COURSE":false,"SENTRY_FRONTEND":{"dsn":"https://355a1d96717e4038ac25aa852fa79a8f@relay-dub.sentry.insops.net/388","org_slug":"instructure","base_url":"https://sentry.insops.net","normalized_route":"/courses/{course_id}/files","errors_sample_rate":"0.005","traces_sample_rate":"0.005","url_deny_pattern":"instructure-uploads.*amazonaws.com","revision":"canvas-lms@20260225.421"},"DATA_COLLECTION_ENDPOINT":"https://canvas-frontend-data-dub-prod.inscloudgate.net/submit","DOMAIN_ROOT_ACCOUNT_SFID":"001A000001B1xM1","DIRECT_SHARE_ENABLED":false,"CAN_VIEW_CONTENT_SHARES":false,"FEATURES":{"account_level_blackout_dates":false,"assignment_edit_placement_not_on_announcements":false,"a11y_checker_additional_resources":false,"a11y_checker_close_issues":false,"a11y_checker_ga2_features":false,"block_content_editor_toolbar_reorder":false,"commons_new_quizzes":true,"consolidated_media_player":true,"courses_popout_sisid":true,"create_external_apps_side_tray_overrides":false,"dashboard_graphql_integration":false,"developer_key_user_agent_alert":true,"disallow_threaded_replies_fix_alert":true,"disallow_threaded_replies_manage":true,"discussion_ai_survey_link":false,"discussion_checkpoints":true,"discussion_permalink":true,"enhanced_course_creation_account_fetching":false,"explicit_latex_typesetting":false,"feature_flag_ui_sorting":true,"files_a11y_rewrite":true,"files_a11y_rewrite_toggle":true,"horizon_course_setting":false,"instui_for_import_page":true,"instui_header":false,"media_links_use_attachment_id":true,"multiselect_gradebook_filters":true,"nav_menu_links":false,"new_quizzes_media_type":true,"new_quizzes_navigation_updates":true,"permanent_page_links":true,"rce_a11y_resize":true,"rce_asr_captioning_improvements":false,"rce_find_replace":true,"render_both_to_do_lists":false,"scheduled_feedback_releases":true,"speedgrader_studio_media_capture":true,"student_access_token_management":true,"validate_call_to_action":false,"block_content_editor_ai_alt_text":true,"ux_list_concluded_courses_in_bp":true,"account_level_mastery_scales":false,"ams_root_account_integration":false,"ams_advanced_content_organization":false,"api_rate_limits":true,"buttons_and_icons_root_account":true,"canvas_apps_sub_account_access":true,"course_pace_allow_bulk_pace_assign":false,"course_pace_download_document":false,"course_pace_draft_state":false,"course_pace_pacing_status_labels":false,"course_pace_pacing_with_mastery_paths":false,"course_pace_time_selection":false,"course_pace_weighted_assignments":false,"course_paces_skip_selected_days":false,"create_course_subaccount_picker":false,"disable_iframe_sandbox_file_show":false,"extended_submission_state":false,"file_verifiers_for_quiz_links":true,"instui_nav":false,"login_registration_ui_identity":false,"lti_apps_page_ai_translation":true,"lti_apps_page_instructors":false,"lti_asset_processor":true,"lti_asset_processor_discussions":false,"lti_link_to_apps_from_developer_keys":true,"lti_registrations_discover_page":true,"lti_registrations_next":true,"lti_registrations_page":true,"lti_registrations_usage_data":true,"lti_registrations_usage_data_dev":false,"lti_registrations_usage_data_low_usage":false,"lti_registrations_usage_tab":false,"lti_toggle_placements":true,"mobile_offline_mode":true,"modules_requirements_allow_percentage":false,"non_scoring_rubrics":true,"open_tools_in_new_tab":true,"pendo_extended":false,"product_tours":false,"rce_lite_enabled_speedgrader_comments":true,"rce_transform_loaded_content":false,"react_discussions_post":true,"restrict_student_access":false,"rubric_criterion_range":true,"scheduled_page_publication":true,"send_usage_metrics":false,"top_navigation_placement":false,"youtube_migration":false,"widget_dashboard":false,"account_survey_notifications":false,"embedded_release_notes":true,"canvas_k6_theme":false,"lti_asset_processor_course":true,"new_math_equation_handling":true,"youtube_overlay":true,"rce_studio_embed_improvements":false,"a11y_checker_ai_table_caption_generation":false,"a11y_checker_ai_alt_text_generation":false,"peer_review_allocation_and_grading":false},"current_user":{"id":"388225","anonymous_id":"8bk1","display_name":"Roar Pacuan Andersen","avatar_image_url":"https://absalon.ku.dk/images/messages/avatar-50.png","html_url":"https://absalon.ku.dk/about/388225","pronouns":null,"avatar_is_fallback":true,"email":"pmj532@alumni.ku.dk"},"current_user_is_admin":false,"page_view_update_url":"/page_views/a7856c0d-7c24-496a-9f5b-a3cb56c0ec72?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiYTc4NTZjMGQtN2MyNC00OTZhLTlmNWItYTNjYjU2YzBlYzcyIiwidSI6NzUwMDAwMDAwMDAzODgyMjUsImMiOiIyMDI2LTAzLTA1VDA5OjM2OjQ0Ljg4WiJ9.8GoZEIDV_y6wkHRc05JOdPHfB5WE8N0BUIqcaGg7fuM","context_asset_string":"course_89316","ping_url":"https://absalon.ku.dk/api/v1/courses/89316/ping","TIMEZONE":"Europe/Copenhagen","CONTEXT_TIMEZONE":"Europe/Copenhagen","LOCALES":["en-GB","en"],"BIGEASY_LOCALE":"en_GB","FULLCALENDAR_LOCALE":"en-gb","MOMENT_LOCALE":"en-gb","rce_auto_save_max_age_ms":86400000,"K5_USER":false,"USE_CLASSIC_FONT":false,"K5_HOMEROOM_COURSE":false,"K5_SUBJECT_COURSE":false,"LOCALE_TRANSLATION_FILE":"https://du11hjcvx0uqb.cloudfront.net/dist/javascripts/translations/en-GB-ecfceef970.json","ACCOUNT_ID":"67","user_cache_key":"cf0237756378a05498fcb5f03aea1da4a0c2e8a1b0557d05e29c350e5b0761958803449d332c448a06684fb5ccb980641ecc425b38efbe73507d32a3776914cb","horizon_course":false,"HORIZON_ACCOUNT":false,"current_context":{"id":"89316","name":"5100-B3-3F26;Signal and image processing","type":"Course","url":"https://absalon.ku.dk/courses/89316"},"FILES_CONTEXTS":[{"asset_string":"course_89316","name":"5100-B3-3F26;Signal and image processing","usage_rights_required":false,"permissions":{"manage_files_add":false,"manage_files_edit":false,"manage_files_delete":false},"file_menu_tools":[],"file_index_menu_tools":[],"root_folder_id":"2062718","root_folder_right":true}],"COURSE_ID":"89316","NEW_USER_TUTORIALS":{"is_enabled":false},"NEW_USER_TUTORIALS_ENABLED_AT_ACCOUNT":{"is_enabled":true},"badge_counts":{"submissions":6},"notices":[],"active_context_tab":"files"};
+    BRANDABLE_CSS_HANDLEBARS_INDEX = [["new_styles_normal_contrast","new_styles_high_contrast","new_styles_normal_contrast_rtl","new_styles_high_contrast_rtl","new_styles_normal_contrast_dyslexic","new_styles_high_contrast_dyslexic","new_styles_normal_contrast_dyslexic_rtl","new_styles_high_contrast_dyslexic_rtl"],{"10":["908ffbc673",0,"d5c9044c6e",2,0,0,2,2],"15":["c8540c43a4",0,"0a2196be1d",2,0,0,2,2],"19":["df5777ed9c"],"61":["d5c4afc14e","ebb835cdef","384361a056","2e0ba247d5",0,1,2,3],"67":["db2aeb63d1",0,"32c90f1518",2,0,0,2,2],"71":["b848cc547a","83ae671549","d1c7bac7c6","0888a4a9e7",0,1,2,3],"06":["ba28819778",0,"96b99aafe5",2,0,0,2,2],"f0":["b349f31f5e",0,0,0,0,0,0,0],"c8":["aeda914f8b","c49cb30680","817080456d","ea2c01509e",0,1,2,3],"1e":["834e660fc6","35fd7c2fa0","99d344b95a","3de47096dc",0,1,2,3],"0c":["4dae5befd2",0,"c18876be89",2,0,0,2,2],"da":["b5a7f9cd8f","6e65f5abf7","773390ae11","6481b459be",0,1,2,3],"1d":["2128789890",0,"e568085637",2,0,0,2,2],"08":["64bff5a97d"],"e2":["79d37f210d"],"9f":["d39b291ba6",0,0,0,0,0,0,0],"2b":["20b6964699","b11dc54da6","62fe3ea30b","6bb4a7ae9e",0,1,2,3],"2c":["8a926fc28b",0,0,0,0,0,0,0],"c2":["6f2721ae01"],"9c":["c31821c764",0,"1693aba1da",2,0,0,2,2],"c5":["b5d5bef953","09b4a0b487","27a133737e","2098769aea",0,1,2,3],"f2":["51574f9b13"]}]
+      REMOTES = {};
+  </script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/4fcc371bc3d638f8fb4ed2047fa3cc84/variables-6ceabaf6137deaa1b310c07895491bdd.js" defer="defer"></script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/timezone/Europe/Copenhagen-5fe65a2f13.js" defer="defer"></script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/timezone/Europe/Copenhagen-5fe65a2f13.js" defer="defer"></script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/timezone/en_GB-31745e04c9.js" defer="defer"></script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/moment/locale/en-gb-chunk-f96b3a4e2594b59c.js" defer="defer"></script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/react-entry-be1bde4765d8e661.js" crossorigin="anonymous" defer="defer"></script>
+  <script src="https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/main-entry-2d34ccc8e527e49d.js" crossorigin="anonymous" defer="defer"></script>
+<script>
+//<![CDATA[
+(window.bundles || (window.bundles = [])).push('files_v2');
+(window.bundles || (window.bundles = [])).push('navigation_header');
+//]]>
+</script>
+  
+</head>
+
+<body class="full-width padless-content with-left-side course-menu-expanded files primary-nav-expanded full-width context-course_89316 responsive_student_grades_page">
+
+<noscript>
+  <div role="alert" class="ic-flash-static ic-flash-error">
+    <div class="ic-flash__icon" aria-hidden="true">
+      <i class="icon-warning"></i>
+    </div>
+    <h1> To access this site, you must enable JavaScript.</h1>
+  </div>
+</noscript>
+
+
+
+
+<div id="flash_message_holder"></div>
+<div id="flash_screenreader_holder"></div>
+
+<div id="application" class="ic-app ">
+  
+
+
+
+
+<header id="mobile-header" class="no-print">
+  <button type="button" class="Button Button--icon-action-rev Button--large mobile-header-hamburger">
+    <i class="icon-solid icon-hamburger"></i>
+    <span id="mobileHeaderInboxUnreadBadge" class="menu-item__badge" style="min-width: 0; top: 12px; height: 12px; right: 6px; display:none;"></span>
+    <span class="screenreader-only">Global Navigation Menu</span>
+  </button>
+  <div class="mobile-header-space"></div>
+    <a class="mobile-header-title expandable" href="/courses/89316" role="button" aria-controls="mobileContextNavContainer">
+      <div>5100-B3-3F26;Signal and image processing</div>
+    </a>
+
+  <div id="nutrition_facts_mobile_container"></div>
+
+
+    <div class="mobile-header-space"></div>
+    <button type="button" class="Button Button--icon-action-rev Button--large mobile-header-arrow" aria-label="Navigation menu">
+      <i class="icon-arrow-open-down" id="mobileHeaderArrowIcon"></i>
+    </button>
+</header>
+<nav id="mobileContextNavContainer"></nav>
+
+<header id="header" class="ic-app-header no-print " aria-label="Global Header">
+  <a href="#content" id="skip_navigation_link">Skip to content</a>
+  <div role="region" class="ic-app-header__main-navigation" aria-label="Global navigation">
+      <div class="ic-app-header__logomark-container">
+        <a href="https://absalon.ku.dk/" class="ic-app-header__logomark">
+          <span class="screenreader-only">Dashboard</span>
+        </a>
+      </div>
+    <ul id="menu" class="ic-app-header__menu-list">
+        <li class="menu-item ic-app-header__menu-list-item ">
+          <a id="global_nav_profile_link" role="button" href="/profile/settings" class="ic-app-header__menu-list-link">
+            <div class="menu-item-icon-container">
+              <div aria-hidden="true" class="fs-exclude ic-avatar ">
+                <img src="https://absalon.ku.dk/images/messages/avatar-50.png" alt="Roar Pacuan Andersen" />
+              </div>
+              <span class="menu-item__badge"></span>
+            </div>
+            <div class="menu-item__text">
+              Account
+            </div>
+          </a>
+        </li>
+      <li class="ic-app-header__menu-list-item ">
+        <a id="global_nav_dashboard_link" href="https://absalon.ku.dk/" class="ic-app-header__menu-list-link">
+          <div class="menu-item-icon-container" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z" /></svg>
+
+          </div>
+          <div class="menu-item__text">
+            Dashboard
+          </div>
+        </a>
+      </li>
+        <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+          <a id="global_nav_courses_link" role="button" href="/courses" class="ic-app-header__menu-list-link">
+            <div class="menu-item-icon-container" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"/></svg>
+
+            </div>
+            <div class="menu-item__text">
+              Courses
+            </div>
+          </a>
+        </li>
+        <li class="menu-item ic-app-header__menu-list-item ">
+          <a id="global_nav_groups_link" role="button" href="/groups" class="ic-app-header__menu-list-link">
+            <div class="menu-item-icon-container" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--groups" viewBox="0 0 200 135"><path d="M134.5 129.4c0-1.1 0-19.8-6.2-31.1-4.5-8.5-16.4-12.4-35-19.2-1.7-.6-3.4-1.1-5.1-1.7v-8.5c5.6-5.1 8.5-12.4 8.5-20.3V29.4C96.6 13 83.6 0 67.2 0S37.9 13 37.9 29.4v19.2c0 7.3 3.4 14.7 8.5 20.3v8.5c-1.7.6-3.4 1.1-5.1 1.7-18.6 6.2-30.5 10.7-35 19.2C0 109.6 0 128.8 0 129.4c0 3.4 2.3 5.6 5.6 5.6h123.7c3.5 0 5.7-2.3 5.2-5.6zm-123.2-5.7c.6-5.6 1.7-14.7 3.4-19.8C17 98.8 30 94.3 43.5 89.8c2.8-1.1 5.6-2.3 9-3.4 2.3-.6 4-2.8 4-5.1V66.7c0-1.7-.6-3.4-1.7-4.5-4-3.4-6.2-8.5-6.2-13.6V29.4c0-10.2 7.9-18.1 18.1-18.1s18.1 7.9 18.1 18.1v19.2c0 5.1-2.3 10.2-6.2 13.6-1.1 1.1-1.7 2.8-1.7 4.5v14.7c0 2.3 1.7 4.5 4 5.1 2.8 1.1 6.2 2.3 9 3.4 13.6 5.1 26.6 9.6 28.8 14.1 2.8 5.1 4 13.6 4.5 19.8H11.3zM196 79.1c-2.8-6.2-11.3-9.6-22.6-13.6l-1.7-.6v-3.4c4.5-4 6.8-9.6 6.8-15.8V35c0-12.4-9.6-22-22-22s-22 10.2-22 22v10.7c0 6.2 2.3 11.9 6.8 15.8V65l-1.7.6c-7.3 2.8-13 4.5-16.9 7.3-1.7 1.1-2.3 2.8-2.3 5.1.6 1.7 1.7 3.4 3.4 4.5 7.9 4 12.4 7.3 14.1 10.7 2.3 4.5 4 10.2 5.1 18.1.6 2.3 2.8 4.5 5.6 4.5h45.8c3.4 0 5.6-2.8 5.6-5.1 0-3.9 0-24.3-4-31.6zm-42.9 25.4c-1.1-6.8-2.8-12.4-5.1-16.9-1.7-4-5.1-6.8-9.6-10.2 1.7-1.1 3.4-1.7 5.1-2.3l5.6-2.3c1.7-.6 3.4-2.8 3.4-5.1v-9.6c0-1.7-.6-3.4-2.3-4.5-2.8-1.7-4.5-5.1-4.5-8.5V34.5c0-6.2 4.5-10.7 10.7-10.7s10.7 5.1 10.7 10.7v10.7c0 3.4-1.7 6.2-4.5 8.5-1.1 1.1-2.3 2.8-2.3 4.5v10.2c0 2.3 1.1 4.5 3.4 5.1l5.6 2.3c6.8 2.3 15.3 5.6 16.4 7.9 1.7 2.8 2.8 12.4 2.8 20.9h-35.4z"/></svg>
+
+            </div>
+            <div class="menu-item__text">
+              Groups
+            </div>
+          </a>
+        </li>
+      <li class="menu-item ic-app-header__menu-list-item ">
+        <a id="global_nav_calendar_link" href="/calendar" class="ic-app-header__menu-list-link">
+          <div class="menu-item-icon-container" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"/></svg>
+
+          </div>
+          <div class="menu-item__text">
+            Calendar
+          </div>
+        </a>
+      </li>
+      <li class="menu-item ic-app-header__menu-list-item ">
+      <!-- TODO: Add back global search when available -->
+        <a id="global_nav_conversations_link" href="/conversations" class="ic-app-header__menu-list-link">
+          <div class="menu-item-icon-container">
+            <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"/></svg>
+</span>
+            <span class="menu-item__badge"></span>
+          </div>
+          <div class="menu-item__text">
+            Inbox
+          </div>
+        </a>
+      </li>
+        <li class="menu-item ic-app-header__menu-list-item" >
+          <a id="global_nav_history_link" role="button" href="#" class="ic-app-header__menu-list-link">
+            <div class="menu-item-icon-container" aria-hidden="true">
+              <svg viewBox="0 0 1920 1920" class="ic-icon-svg menu-item__icon svg-icon-history" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M960 112.941c-467.125 0-847.059 379.934-847.059 847.059 0 467.125 379.934 847.059 847.059 847.059 467.125 0 847.059-379.934 847.059-847.059 0-467.125-379.934-847.059-847.059-847.059M960 1920C430.645 1920 0 1489.355 0 960S430.645 0 960 0s960 430.645 960 960-430.645 960-960 960m417.905-575.955L903.552 988.28V395.34h112.941v536.47l429.177 321.77-67.765 90.465z" stroke="none" stroke-width="1" fill-rule="evenodd"/>
+</svg>
+            </div>
+            <div class="menu-item__text">
+              History
+            </div>
+          </a>
+        </li>
+        
+
+      <li class="ic-app-header__menu-list-item">
+        <a id="global_nav_help_link" role="button" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="https://help.instructure.com">
+          <div class="menu-item-icon-container" role="presentation">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"/></svg>
+
+            <span class="menu-item__badge"></span>
+          </div>
+          <div class="menu-item__text">
+            Help
+          </div>
+</a>      </li>
+    </ul>
+  </div>
+  <div class="ic-app-header__secondary-navigation">
+    <ul class="ic-app-header__menu-list">
+      <li class="menu-item ic-app-header__menu-list-item">
+        <a
+          id="primaryNavToggle"
+          role="button"
+          href="#"
+          class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle"
+          aria-label="Minimise global navigation"
+          title="Minimise global navigation"
+        >
+          <div class="menu-item-icon-container" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"/>
+</svg>
+
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div id="global_nav_tray_container"></div>
+  <div id="global_nav_tour"></div>
+</header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="about:blank" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+        <div class="ic-app-nav-toggle-and-crumbs no-print">
+            <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide courses navigation menu">
+              <i class="icon-hamburger" aria-hidden="true"></i>
+            </button>
+
+          <div class="ic-app-crumbs ic-app-crumbs-enhanced-rubrics">
+              <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ol><li class="home"><a href="/"><span class="ellipsible"><i class="icon-home"
+   title="My dashboard">
+  <span class="screenreader-only">My dashboard</span>
+</i>
+</span></a></li><li aria-current="page"><a href="/courses/89316"><span class="ellipsible">5100-B3-3F26;Signal and image processing</span></a></li></ol></nav>
+          </div>
+
+
+          <div id="nutrition_facts_container"></div>
+          <div class="right-of-crumbs right-of-crumbs-no-reverse">
+              <div class="TutorialToggleHolder"></div>
+            <div id="ai-information-mount"></div>
+          </div>
+
+        </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark" aria-hidden="true"></div>
+        <div id="left-side"
+          class="ic-app-course-menu ic-sticky-on list-view"
+          style="display: block"
+          >
+          <div id="sticky-container" class="ic-sticky-frame">
+              <span id="section-tabs-header-subtitle" class="ellipsis">B3-3F26</span>
+            <nav role="navigation" aria-label="Courses navigation menu"><ul id="section-tabs"><li class="section"><a id="home-link" href="/courses/89316" class="home">Home</a></li><li class="section"><a id="igniteai-search-link" href="/courses/89316/search" class="search">IgniteAI Search</a></li><li class="section"><a id="announcements-link" href="/courses/89316/announcements" class="announcements">Announcements</a></li><li class="section"><a id="modules-link" href="/courses/89316/modules" class="modules">Modules</a></li><li class="section"><a id="people-link" href="/courses/89316/users" class="people">People</a></li><li class="section"><a id="pages-link" href="/courses/89316/wiki" class="pages">Pages</a></li><li class="section"><a id="assignments-link" href="/courses/89316/assignments" class="assignments">Assignments</a></li><li class="section"><a id="discussions-link" href="/courses/89316/discussion_topics" class="discussions">Discussions</a></li><li class="section"><a id="quizzes-link" href="/courses/89316/quizzes" class="quizzes">Quizzes</a></li><li class="section"><a id="files-link" href="/courses/89316/files" aria-current="page" class="files active">Files</a></li><li class="section"><a id="grades-link" href="/courses/89316/grades" class="grades">Grades</a></li><li class="section"><a id="context_external_tool_95630-link" href="/courses/89316/external_tools/95630" class="context_external_tool_95630">Kursusinformation</a></li></ul></nav>
+          </div>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+          
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">a7856c0d-7c24-496a-9f5b-a3cb56c0ec72</div>
+    </div>
+  <div id='aria_alerts' class='hide-text affix' role="alert" aria-live="assertive"></div>
+  <div id='StudentTray__Container'></div>
+    <div class="NewUserTutorialTray__Container"></div>
+  <div id="react-router-portals"></div>
+
+
+  
+
+  <iframe src="https://sso.canvaslms.com/post_message_forwarding?rev=e6aca5e55d-de8233d392aa15f4&amp;token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJwYXJlbnRfZG9tYWluIjoiYWJzYWxvbi5rdS5kayJ9.vf1KxjrxqLYGyoitApCGVxJYryGJi0unuKHg0pgIOkRcMDeDfRqb7NwULItzTF8e-oZaj-zQco8759wYpT9HkQ" name="post_message_forwarding" title="post_message_forwarding" id="post_message_forwarding" sandbox="allow-scripts allow-same-origin" style="display:none;"></iframe>
+
+
+  <script>
+    Object.assign(
+      ENV,
+      {}
+    )
+  </script>
+
+<script>
+//<![CDATA[
+(window.bundles || (window.bundles = [])).push('inst_fs_service_worker');
+//]]>
+</script>
+<script src="https://instructure-uploads-eu.s3.eu-west-1.amazonaws.com/account_75000000000000001/attachments/7465193/Theme%20Instructure%20JavaScript%20file%2023%20aug%202023%20latest.js" defer="defer"></script>
+
+
+</div> <!-- #application -->
+</body>
+</html>
