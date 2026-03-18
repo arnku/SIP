@@ -76,3 +76,31 @@ plt.title("Detected Lines (scikit-image)")
 plt.xlim((0, image.shape[1]))
 plt.ylim((image.shape[0], 0))
 plt.show()
+
+
+image = skimage.io.imread("matrikelnumre_trans.png")
+
+blue_mask = (image[:, :, 0] <= 80) & (image[:, :, 1] <= 150) & (image[:, :, 2] >= 100)
+
+diameter = 15
+diameters = np.arange(diameter - 7, diameter + 7)
+
+edges = skimage.feature.canny(blue_mask)
+
+hough_res = skimage.transform.hough_circle(edges, diameters)
+accum, cx, cy, radii = skimage.transform.hough_circle_peaks(hough_res, diameters, total_num_peaks=1)
+
+plt.subplot(1, 2, 1)
+plt.imshow(blue_mask, cmap='gray')
+plt.title("Blue Mask")
+plt.axis('off')
+plt.subplot(1, 2, 2)
+plt.title(f"cx: {cx[0]}, cy: {cy[0]}, radius: {radii[0]}")
+plt.imshow(image)
+for center_y, center_x, radius in zip(cy, cx, radii):
+    circle = plt.Circle((center_x, center_y), radius, color='r', fill=False)
+    plt.gca().add_patch(circle)
+circle = plt.Circle((cx[0], cy[0]), 2, color='r', fill=True)
+plt.gca().add_patch(circle)
+plt.axis('off')
+plt.show()

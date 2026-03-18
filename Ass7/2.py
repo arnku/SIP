@@ -65,3 +65,5 @@ plt.imshow(img_warped, cmap='gray')
 plt.title('Warped Image')
 plt.axis('off')
 plt.show()
+
+plt.imsave('matrikelnumre_trans.png', img_warped)
