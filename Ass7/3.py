@@ -73,7 +73,7 @@ for r, t in lines:
         y = (rho - x * np.cos(theta)) / np.sin(theta)
         plt.plot(x, y, '-r')
 
-plt.title("Detected Lines (Simple Implementation)")
+plt.title("Detected Lines Simple Implementation")
 plt.xlim((0, image.shape[1]))
 plt.ylim((image.shape[0], 0))
 plt.show()
@@ -91,7 +91,7 @@ for angle, dist in zip(angles_peaks, dists_peaks):
         y = (dist - x * np.cos(angle)) / np.sin(angle)
         plt.plot(x, y, '-b')
 
-plt.title("Detected Lines (scikit-image)")
+plt.title("Detected Lines with scikit-image")
 plt.xlim((0, image.shape[1]))
 plt.ylim((image.shape[0], 0))
 plt.show()
