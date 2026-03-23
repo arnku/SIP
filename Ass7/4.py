@@ -87,39 +87,30 @@ plt.show()
 import matplotlib.pyplot as plt
 from skimage import io, measure, morphology
 
-# --------------------------------------------------
-# 1. Load + binarize
-# --------------------------------------------------
 image = io.imread("money_bin.png", as_gray=True)
 binary = image < 0.5   # coins are black
 
-# --------------------------------------------------
-# 2. Morphological cleaning
-# --------------------------------------------------
+
 selem = morphology.disk(3)
 clean = morphology.opening(binary, selem)
 clean = morphology.closing(clean, selem)
 
-# --------------------------------------------------
-# 3. Label coins (8-connectivity)
-# --------------------------------------------------
+
 labels = measure.label(clean, connectivity=2)
 regions = measure.regionprops(labels)
 
 print("Detected coins:", len(regions))
 
-# --------------------------------------------------
-# 4. Extract features (area + hole)
-# --------------------------------------------------
+
 coins = []
 
 for r in regions:
     mask = (labels == r.label)
 
-    # Fill holes
+    
     filled = morphology.remove_small_holes(mask, area_threshold=500)
 
-    # Hole = difference
+   
     hole = filled ^ mask
     has_hole = np.sum(hole) > 0
 
@@ -129,40 +120,29 @@ for r in regions:
         "has_hole": has_hole
     })
 
-# --------------------------------------------------
-# 5. Split into hole / no-hole groups
-# --------------------------------------------------
+
 with_hole = [c for c in coins if c["has_hole"]]
 without_hole = [c for c in coins if not c["has_hole"]]
 
-# --------------------------------------------------
-# 6. NO-HOLE coins → 50 øre + 20 kr
-# --------------------------------------------------
 without_hole = sorted(without_hole, key=lambda x: x["area"])
 
 coin_values = {}
 
-# smallest = 50 øre
 coin_values[without_hole[0]["label"]] = 0.5
 
-# rest = 20 kr
 for c in without_hole[1:]:
     coin_values[c["label"]] = 20
 
-# --------------------------------------------------
-# 7. HOLE coins → cluster into 1, 2, 5 kr
-# --------------------------------------------------
 with_hole = sorted(with_hole, key=lambda x: x["area"])
 areas = np.array([c["area"] for c in with_hole])
 
-# find biggest gaps → split into 3 groups
 diffs = np.diff(areas)
 split_idx = np.argsort(diffs)[-2:]
 split_idx = np.sort(split_idx)
 
-g1 = with_hole[:split_idx[0]+1]             # smallest → 1 kr
-g2 = with_hole[split_idx[0]+1:split_idx[1]+1]  # middle → 2 kr
-g3 = with_hole[split_idx[1]+1:]            # largest → 5 kr
+g1 = with_hole[:split_idx[0]+1]             
+g2 = with_hole[split_idx[0]+1:split_idx[1]+1]  
+g3 = with_hole[split_idx[1]+1:]            
 
 for c in g1:
     coin_values[c["label"]] = 1
@@ -173,15 +153,10 @@ for c in g2:
 for c in g3:
     coin_values[c["label"]] = 5
 
-# --------------------------------------------------
-# 8. Compute total
-# --------------------------------------------------
+
 total = sum(coin_values.values())
 print("Total money:", total, "kr")
-
-# --------------------------------------------------
-# 9. Visualization (same value = same color)
-# --------------------------------------------------
+#If same value, assign same color
 colors = {
     0.5: [1, 0, 0],    # red
     1:   [0, 1, 0],    # green
@@ -198,7 +173,6 @@ for c in coins:
 
 plt.figure(figsize=(8,6))
 plt.imshow(colored)
-plt.title(f"Coins classified (area + holes), total = {total} kr")
 plt.axis("off")
 plt.show()
 
@@ -207,7 +181,9 @@ for c in coins:
 
 
 #4_3
+import numpy as np
 import matplotlib.pyplot as plt
+from scipy import ndimage as ndi
 from skimage import io, color, measure, morphology
 from skimage.filters import threshold_otsu
 
@@ -215,49 +191,55 @@ from skimage.filters import threshold_otsu
 image = io.imread("matrikelnumre_nat.png")
 gray = color.rgb2gray(image)
 
-# Binary
+# Threshold so map is white foreground
 thresh = threshold_otsu(gray)
-binary = gray < thresh
+binary = gray > thresh
 
-# Fill holes → makes map solid
-filled = morphology.remove_small_holes(binary, area_threshold=5000)
-
-# Label connected components (8-connectivity)
-labels = measure.label(filled, connectivity=2)
-
-# Get regions
+# Keep only largest connected component = map
+labels = measure.label(binary, connectivity=2)
 regions = measure.regionprops(labels)
+largest = max(regions, key=lambda r: r.area)
+map_mask = labels == largest.label
 
-# Sort by area (largest first)
-regions = sorted(regions, key=lambda r: r.area, reverse=True)
+# Close small holes / thin gaps in the map
+closed = morphology.closing(map_mask, morphology.disk(6))
 
-# Keep:
-# - largest region → map
-# - second round region → blue dot
-clean = (labels == regions[0].label)
+# Fill everything to get the plain map support
+support = ndi.binary_fill_holes(closed)
 
-# Find circular region (dot)
-for r in regions[1:]:
-    # circularity check: area vs bounding box
-    minr, minc, maxr, maxc = r.bbox
-    h = maxr - minr
-    w = maxc - minc
+# Residual black components that remain after closing
+residual_black = support & (~closed)
 
-    if abs(h - w) < 10:  # roughly square → circle
-        clean = clean | (labels == r.label)
-        break
+# Remove tiny junk
+residual_black = morphology.remove_small_objects(residual_black, min_size=20)
 
-# Visualization
-plt.figure(figsize=(10, 5))
+# Label residual components
+comp_labels = measure.label(residual_black, connectivity=2)
 
-plt.subplot(1, 2, 1)
-plt.title("Original binary")
-plt.imshow(binary, cmap="gray")
+# Blue dot label chosen manually from labeled plot
+dot_label = 6
+dot_mask = comp_labels == dot_label
+
+# Final result: plain map with only blue-dot hole preserved
+final = support.copy()
+final[dot_mask] = False
+
+# Show final result
+plt.figure(figsize=(15, 5))
+
+plt.subplot(1, 3, 1)
+plt.imshow(map_mask, cmap="gray")
+plt.title("Original binary map mask")
 plt.axis("off")
 
-plt.subplot(1, 2, 2)
-plt.title("Final cleaned (map + dot only)")
-plt.imshow(clean, cmap="gray")
+plt.subplot(1, 3, 2)
+plt.imshow(closed, cmap="gray")
+plt.title("After closing with disk(6)")
+plt.axis("off")
+
+plt.subplot(1, 3, 3)
+plt.imshow(final, cmap="gray")
+plt.title("Final cleaned mask")
 plt.axis("off")
 
 plt.tight_layout()
