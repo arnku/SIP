@@ -59,6 +59,8 @@ src_corners = np.array([
 tform = skimage.transform.ProjectiveTransform()
 tform.estimate(dst_corners, src_corners)
 
+print(tform.params)
+
 img_warped = skimage.transform.warp(IMG_COL, tform, output_shape=(height, width))
 
 plt.imshow(img_warped, cmap='gray')

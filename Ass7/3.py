@@ -58,11 +58,6 @@ for r, t in lines:
     x = np.array([0, image.shape[1]])
     y = (rhos[r] - x * np.cos(thetas[t])) / np.sin(thetas[t])
     plt.plot(x, y, '-r')
-plt.title("Detected Lines (Simple Implementation)")
-
-    if np.sin(theta) != 0:
-        y = (rho - x * np.cos(theta)) / np.sin(theta)
-        plt.plot(x, y, '-r')
 
 plt.title("Detected Lines Simple Implementation")
 plt.xlim((0, image.shape[1]))
