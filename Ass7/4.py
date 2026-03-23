@@ -1,9 +1,11 @@
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
+
 from skimage import io, color, measure, morphology
-from skimage.morphology import disk, opening, closing
-from skimage.morphology import rectangle
-from skimage import measure
+from skimage.morphology import disk, opening, closing, rectangle
+from skimage.filters import threshold_otsu
+
+from scipy import ndimage as ndi
 
 image = io.imread("cells_binary_inv.png", as_gray=True)
 binary = image > 0.5 
@@ -113,11 +115,6 @@ plt.tight_layout()
 plt.show()
 
 
-
-import numpy as np
-import matplotlib.pyplot as plt
-from skimage import io, measure, morphology
-
 # --------------------------------------------------
 # Load image and binarize
 # --------------------------------------------------
@@ -225,11 +222,7 @@ plt.show()
 for c in coins:
     print(f"Area: {c['area']:.0f}, Hole: {c['has_hole']}, Value: {coin_values[c['label']]}")
 #4_3
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy import ndimage as ndi
-from skimage import io, color, measure, morphology
-from skimage.filters import threshold_otsu
+
 
 # Load image
 image = io.imread("matrikelnumre_nat.png")
