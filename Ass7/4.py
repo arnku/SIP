@@ -3,6 +3,7 @@ import numpy as np
 from skimage import io, color, measure, morphology
 from skimage.morphology import disk, opening, closing
 from skimage.morphology import rectangle
+from skimage import measure
 
 image = io.imread("cells_binary_inv.png", as_gray=True)
 binary = image > 0.5 
@@ -82,15 +83,50 @@ plt.axis('off')
 plt.tight_layout()
 plt.show()
 
+#4_1_3
 
-#4_2
+# Label components (8-connectivity)
+labels_open = measure.label(opened, connectivity=2)
+labels_close = measure.label(closed, connectivity=2)
+
+# Count components
+num_open = labels_open.max()
+num_close = labels_close.max()
+
+print("Opening components:", num_open)
+print("Closing components:", num_close)
+
+# Visualize
+plt.figure(figsize=(10, 5))
+
+plt.subplot(1, 2, 1)
+plt.imshow(labels_open, cmap='nipy_spectral')
+plt.title(f"Opening labels ({num_open})")
+plt.axis("off")
+
+plt.subplot(1, 2, 2)
+plt.imshow(labels_close, cmap='nipy_spectral')
+plt.title(f"Closing labels ({num_close})")
+plt.axis("off")
+
+plt.tight_layout()
+plt.show()
+
+
+
+import numpy as np
 import matplotlib.pyplot as plt
 from skimage import io, measure, morphology
 
+# --------------------------------------------------
+# Load image and binarize
+# --------------------------------------------------
 image = io.imread("money_bin.png", as_gray=True)
 binary = image < 0.5   # coins are black
 
-
+# --------------------------------------------------
+# Morphological cleaning
+# --------------------------------------------------
 selem = morphology.disk(3)
 clean = morphology.opening(binary, selem)
 clean = morphology.closing(clean, selem)
@@ -107,10 +143,8 @@ coins = []
 for r in regions:
     mask = (labels == r.label)
 
-    
+    # Fill holes to detect if coin has hole
     filled = morphology.remove_small_holes(mask, area_threshold=500)
-
-   
     hole = filled ^ mask
     has_hole = np.sum(hole) > 0
 
@@ -124,19 +158,30 @@ for r in regions:
 with_hole = [c for c in coins if c["has_hole"]]
 without_hole = [c for c in coins if not c["has_hole"]]
 
-without_hole = sorted(without_hole, key=lambda x: x["area"])
-
 coin_values = {}
 
-coin_values[without_hole[0]["label"]] = 0.5
+without_hole = sorted(without_hole, key=lambda x: x["area"])
 
-for c in without_hole[1:]:
+areas_wo = np.array([c["area"] for c in without_hole])
+diffs_wo = np.diff(areas_wo)
+
+split_wo = np.argmax(diffs_wo)
+
+small_group = without_hole[:split_wo+1]
+large_group = without_hole[split_wo+1:]
+
+for c in small_group:
+    coin_values[c["label"]] = 0.5
+
+for c in large_group:
     coin_values[c["label"]] = 20
 
 with_hole = sorted(with_hole, key=lambda x: x["area"])
 areas = np.array([c["area"] for c in with_hole])
 
 diffs = np.diff(areas)
+
+# Find two largest jumps
 split_idx = np.argsort(diffs)[-2:]
 split_idx = np.sort(split_idx)
 
@@ -156,7 +201,7 @@ for c in g3:
 
 total = sum(coin_values.values())
 print("Total money:", total, "kr")
-#If same value, assign same color
+
 colors = {
     0.5: [1, 0, 0],    # red
     1:   [0, 1, 0],    # green
@@ -173,13 +218,12 @@ for c in coins:
 
 plt.figure(figsize=(8,6))
 plt.imshow(colored)
+plt.title("Coin classification result")
 plt.axis("off")
 plt.show()
 
 for c in coins:
     print(f"Area: {c['area']:.0f}, Hole: {c['has_hole']}, Value: {coin_values[c['label']]}")
-
-
 #4_3
 import numpy as np
 import matplotlib.pyplot as plt
@@ -223,8 +267,6 @@ dot_mask = comp_labels == dot_label
 # Final result: plain map with only blue-dot hole preserved
 final = support.copy()
 final[dot_mask] = False
-
-
 
 #
 plt.figure(figsize=(6, 5))
