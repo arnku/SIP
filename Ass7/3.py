@@ -60,7 +60,7 @@ for r, t in lines:
     plt.plot(x, y, '-r')
 plt.title("Detected Lines (Simple Implementation)")
 
-    if np.sin(theta) != 0:
+if np.sin(theta) != 0:
         y = (rho - x * np.cos(theta)) / np.sin(theta)
         plt.plot(x, y, '-r')
 

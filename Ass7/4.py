@@ -224,23 +224,26 @@ dot_mask = comp_labels == dot_label
 final = support.copy()
 final[dot_mask] = False
 
-# Show final result
-plt.figure(figsize=(15, 5))
 
-plt.subplot(1, 3, 1)
+
+#
+plt.figure(figsize=(6, 5))
 plt.imshow(map_mask, cmap="gray")
 plt.title("Original binary map mask")
 plt.axis("off")
+plt.tight_layout()
+plt.show()
 
-plt.subplot(1, 3, 2)
+plt.figure(figsize=(6, 5))
 plt.imshow(closed, cmap="gray")
 plt.title("After closing with disk(6)")
 plt.axis("off")
+plt.tight_layout()
+plt.show()
 
-plt.subplot(1, 3, 3)
+plt.figure(figsize=(6, 5))
 plt.imshow(final, cmap="gray")
 plt.title("Final cleaned mask")
 plt.axis("off")
-
 plt.tight_layout()
 plt.show()
